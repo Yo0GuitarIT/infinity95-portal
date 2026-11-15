@@ -6,20 +6,20 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
+    "dev": "tsx watch src/server.ts",
+    "check": "tsc --noEmit",
+    "build": "tsc",
+    "start": "node dist/server.js",
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.2.4",
-    "astro": "^6.1.9",
-    "tailwindcss": "^4.2.4"
+    "express": "^5.1.0"
   },
   "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
     "prettier": "3.8.3",
-    "prettier-plugin-astro": "0.14.1",
-    "prettier-plugin-tailwindcss": "^0.7.3"
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
   }
 }
